@@ -108,6 +108,7 @@
     environment.shellAliases = {
       h = "hx";
       hs = "sudo -e";
+      vis = "sudo vim";
     };
 
   };
