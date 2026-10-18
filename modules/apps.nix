@@ -17,6 +17,7 @@
       p7zip
       obsidian
       wf-recorder
+      slurp
 
       inputs.serein.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
