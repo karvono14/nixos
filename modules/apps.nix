@@ -18,6 +18,7 @@
       obsidian
       wf-recorder
       slurp
+      bat
 
       inputs.serein.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
