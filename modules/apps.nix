@@ -2,7 +2,12 @@
 {
   flake.modules.nixos.apps = { pkgs, ... }: {
     programs.firefox.enable = true;
-    programs.yazi.enable = true;
+
+    home-manager.users.karvono14.programs = {
+      yazi = {
+        enable = true;
+      };
+    };
 
     environment.systemPackages = with pkgs; [
       pacman
