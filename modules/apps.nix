@@ -16,6 +16,7 @@
       libreoffice
       p7zip
       obsidian
+      wf-recorder
 
       inputs.serein.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
