@@ -5,7 +5,6 @@
     programs.yazi.enable = true;
 
     environment.systemPackages = with pkgs; [
-      onlyoffice-desktopeditors
       pacman
       nox
       aseprite
