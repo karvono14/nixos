@@ -8,15 +8,14 @@
     home-manager.url = "github:nix-community/home-manager/release-26.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     yazelix.url = "github:Yazelix/nova/stable";
+    tfm.url = "github:karvono14/tfm-tui";
   };
-  
-  outputs = inputs:
-    let 
+
+  outputs =
+    inputs:
+    let
       modulos = inputs.import-tree ./modules;
     in
-      inputs.flake-parts.lib.mkFlake { inherit inputs; } modulos;
-
-
-
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } modulos;
 
 }
