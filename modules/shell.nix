@@ -48,7 +48,7 @@
           enableCompletion = true;
           autosuggestions.enable = true;
           syntaxHighlighting.enable = true;
-          interactiveShellInit = "fastfetch";
+          # interactiveShellInit = "fastfetch";
 
           shellAliases = {
             cf = "cd ~/nixos";
