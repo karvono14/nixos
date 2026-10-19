@@ -14,6 +14,8 @@
       nix-direnv.enable = true;
     };
 
+    programs.nix-ld.enable = true;
+
     home-manager.users.karvono14.programs = {
       helix = {
         enable = true;
