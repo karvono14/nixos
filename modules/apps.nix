@@ -24,6 +24,7 @@
       wf-recorder
       slurp
       bat
+      virtualbox
 
       inputs.serein.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
