@@ -98,8 +98,7 @@
       glow
       vscode
       jq
-      github-desktop
-
+      gh
       # inputs.yazelix.packages.${pkgs.stdenv.hostPlatform.system}.yazelix # <-- el ultimo atributo es el nombre del archivo en el repo
     ];
     environment.variables = {
