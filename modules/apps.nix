@@ -26,7 +26,7 @@
       bat
       virtualbox
 
-      inputs.tmf.packages.${pgks.stdenv.hostPlatform.system}.default
+      inputs.tfm.packages.${pgks.stdenv.hostPlatform.system}.default
       inputs.serein.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
 

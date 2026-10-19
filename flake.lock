@@ -355,7 +355,7 @@
     },
     "kinestra": {
       "inputs": {
-        "nixpkgs": "nixpkgs_5"
+        "nixpkgs": "nixpkgs_6"
       },
       "locked": {
         "lastModified": 1788577505,
@@ -466,6 +466,22 @@
     },
     "nixpkgs_4": {
       "locked": {
+        "lastModified": 1792094642,
+        "narHash": "sha256-zp8ToDMnqZcu4o4IH9pdwXFXGp7yLm/M0dEnNWnyd7I=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "fe13242281a67641c0102cdb1087f0ebe586c7df",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_5": {
+      "locked": {
         "lastModified": 1781577229,
         "narHash": "sha256-lrp67w8AulE9Ks53n27I45ADSzbOCn4H+CNW1Ck8B+8=",
         "owner": "NixOS",
@@ -480,7 +496,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_5": {
+    "nixpkgs_6": {
       "locked": {
         "lastModified": 1780030872,
         "narHash": "sha256-u6WU/yd/o8iYQrHX3RAwO1hYa3LkoSL+WNQD0rJfJZQ=",
@@ -496,7 +512,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_6": {
+    "nixpkgs_7": {
       "locked": {
         "lastModified": 1781577229,
         "narHash": "sha256-lrp67w8AulE9Ks53n27I45ADSzbOCn4H+CNW1Ck8B+8=",
@@ -576,7 +592,7 @@
     "recording-mars": {
       "inputs": {
         "flake-parts": "flake-parts_4",
-        "nixpkgs": "nixpkgs_6",
+        "nixpkgs": "nixpkgs_7",
         "rust-overlay": "rust-overlay_3",
         "systems": "systems_2"
       },
@@ -628,6 +644,7 @@
         "import-tree": "import-tree",
         "nixpkgs": "nixpkgs_2",
         "serein": "serein",
+        "tfm": "tfm",
         "yazelix": "yazelix"
       }
     },
@@ -852,6 +869,24 @@
         "type": "github"
       }
     },
+    "tfm": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "lastModified": 1792446995,
+        "narHash": "sha256-c8Unw60FiWZwxAvxC4JKt4DSJXJFnW3lABWrAykd6ec=",
+        "owner": "karvono14",
+        "repo": "tfm-tui",
+        "rev": "ab79904d68eac569a69205f3c1604f591e9fcae2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "karvono14",
+        "repo": "tfm-tui",
+        "type": "github"
+      }
+    },
     "yazelix": {
       "inputs": {
         "autoLayoutYazi": "autoLayoutYazi",
@@ -864,7 +899,7 @@
           "yazelixScreen",
           "kinestra"
         ],
-        "nixpkgs": "nixpkgs_4",
+        "nixpkgs": "nixpkgs_5",
         "notifyHx": "notifyHx",
         "novaBar": "novaBar",
         "novaHelixFileWatcher": "novaHelixFileWatcher",
