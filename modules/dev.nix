@@ -14,7 +14,13 @@
       nix-direnv.enable = true;
     };
 
-    programs.nix-ld.enable = true;
+    programs.nix-ld = {
+      enable = true;
+      libraries = with pkgs; [
+        stdenv.cc.cc.lib
+        libgcc
+      ];
+    };
 
     home-manager.users.karvono14.programs = {
       helix = {
