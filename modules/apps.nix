@@ -26,6 +26,7 @@
       bat
       virtualbox
       mpv
+      parsec-bin
 
       inputs.tfm.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.serein.packages.${pkgs.stdenv.hostPlatform.system}.default
