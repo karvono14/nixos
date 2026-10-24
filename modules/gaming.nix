@@ -9,7 +9,8 @@
     programs.gamemode.enable = true;
 
     environment.systemPackages = with pkgs; [
-       osu-lazer-bin
+      osu-lazer-bin
+      cacert
     ];
 
     security.pki.certificateFiles = [ ]; # Asegura el almacén de certificados por defecto
