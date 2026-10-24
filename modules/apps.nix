@@ -31,7 +31,7 @@
 
       (rWrapper.override {
         packages = with rPackages; [
-          mvp
+          mpv
         ];
       })
 
