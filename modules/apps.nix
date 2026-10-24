@@ -25,15 +25,16 @@
       slurp
       bat
       virtualbox
+      mpv
 
       inputs.tfm.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.serein.packages.${pkgs.stdenv.hostPlatform.system}.default
 
-      (rWrapper.override {
-        packages = with rPackages; [
-          mpv
-        ];
-      })
+      # (rWrapper.override {
+      #   packages = with rPackages; [
+      #     mpv
+      #   ];
+      # })
 
     ];
 
