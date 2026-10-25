@@ -24,7 +24,7 @@
             add_newline = false;
             line_break.disabled = true;
             directory = {
-              truncation_lenght = 3;
+              truncation_length = 3;
               truncate_to_repo = true;
             };
             character = {
