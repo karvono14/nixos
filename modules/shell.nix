@@ -83,7 +83,6 @@
           enableZshIntegration = true;
           git = true;
           icons = true;
-          package = true;
         };
 
         kitty = {
