@@ -77,6 +77,15 @@
       };
 
       home-manager.users.karvono14.programs = {
+
+        eza = {
+          enable = true;
+          enableZshIntegration = true;
+          git = true;
+          icons = true;
+          package = true;
+        };
+
         kitty = {
           enable = true;
 
