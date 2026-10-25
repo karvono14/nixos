@@ -87,7 +87,7 @@
           enable = true;
 
           font = {
-            name = "DejaVu Sans Mono";
+            name = "JetBrainsMonoNerdFontPropo-Bold";
             size = 12;
           };
 
