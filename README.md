@@ -2,5 +2,5 @@
 ---
 ## Dendtritic pattern
 
-[[structure.png]]
+![structure](structure.png)
 
