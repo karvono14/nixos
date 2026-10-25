@@ -83,6 +83,7 @@
           enableZshIntegration = true;
           git = true;
           icons = true;
+          theme = "catpuccin-mocha";
         };
 
         kitty = {
