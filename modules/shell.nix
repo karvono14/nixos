@@ -80,10 +80,7 @@
 
         eza = {
           enable = true;
-          enableZshIntegration = true;
-          git = true;
-          icons = "auto";
-          theme = "catpuccin-mocha";
+          # theme = "catpuccin-mocha";
         };
 
         kitty = {
@@ -142,5 +139,13 @@
         fastfetch
         btop
       ];
+      environment.shellAliases = {
+        eza = "eza --icons=auto --git";
+        ls = "eza --icons=auto --git";
+        ll = "eza -l --icons=auto --git";
+        la = "eza -a --icons=auto --git";
+        lt = "eza --tree --icons=auto";
+        lla = "eza -la --icons=auto --git";
+      };
     };
 }
