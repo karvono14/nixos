@@ -18,7 +18,7 @@
           presets = [
             "nerd-font-symbols"
             #            "jetpack"
-            "pure-preset"
+            "pure"
           ];
           settings = {
             add_newline = false;
