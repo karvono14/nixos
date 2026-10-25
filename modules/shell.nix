@@ -21,8 +21,8 @@
             "pure-preset"
           ];
           settings = {
-            add_newline = false;
-            line_break.disabled = true;
+            add_newline = true;
+            line_break.disabled = false;
             directory = {
               truncation_length = 3;
               truncation_symbol = "../";
