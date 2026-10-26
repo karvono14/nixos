@@ -97,7 +97,7 @@
             background_opacity = 0.9;
             window_padding_width = 12;
             copy_on_select = true;
-            shellIntegration = true;
+            shell_integration = "enabled";
           };
 
           extraConfig = ''
