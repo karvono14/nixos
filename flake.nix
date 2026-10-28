@@ -3,7 +3,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:denful/import-tree";
-    dms.url = "github:duxlabs-dev/dux-shell/stable-2.0";
+    dms.url = "github:duxlabs-dev/dux-shell/stable";
     serein.url = "github:ViceVerse-cz/Serein";
     home-manager.url = "github:nix-community/home-manager/release-26.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
