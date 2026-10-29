@@ -26,5 +26,7 @@
       "root"
       "karvono14"
     ];
+
+    users.extraGroups.vboxusers.members = [ "karvono14" ];
   };
 }

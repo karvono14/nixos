@@ -24,7 +24,6 @@
       wf-recorder
       slurp
       bat
-      virtualbox
       mpv
 
       inputs.tfm.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -38,6 +37,11 @@
       # })
 
     ];
+
+    virtualisation.virtualbox.host = {
+      enable = true;
+      enableExtensionPack = true;
+    };
 
     services = {
       gvfs.enable = true;
