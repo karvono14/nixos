@@ -19,6 +19,16 @@
       libraries = with pkgs; [
         stdenv.cc.cc.lib
         libgcc
+        zlib
+        freetype
+        fontconfig
+        xorg.libX11
+        xorg.libXext
+        xorg.libXrender
+        xorg.libXtst
+        xorg.libXi
+        xorg.libXrandr
+        alsa-lib
       ];
     };
 
