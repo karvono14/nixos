@@ -22,12 +22,12 @@
         zlib
         freetype
         fontconfig
-        xorg.libX11
-        xorg.libXext
-        xorg.libXrender
-        xorg.libXtst
-        xorg.libXi
-        xorg.libXrandr
+        libX11
+        libXext
+        libXrender
+        libXtst
+        libXi
+        libXrandr
         alsa-lib
       ];
     };
