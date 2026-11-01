@@ -26,6 +26,7 @@
       bat
       mpv
       eza
+      ranger
 
       inputs.tfm.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.serein.packages.${pkgs.stdenv.hostPlatform.system}.default
