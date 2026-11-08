@@ -40,7 +40,7 @@
           enable = true;
           # defaultEditor = true;
           settings = {
-            theme = "monokai_transparent";
+            theme = "tokyonight_transparent";
             editor = {
               line-number = "relative";
               mouse = true;
@@ -64,6 +64,11 @@
 
           themes.monokai_transparent = {
             inherits = "monokai";
+            "ui.background" = { };
+          };
+
+          themes.tokyonight_transparent = {
+            inherits = "tokyonight";
             "ui.background" = { };
           };
 
