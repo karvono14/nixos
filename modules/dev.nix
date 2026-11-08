@@ -132,11 +132,11 @@
 
         };
       };
+    };
 
-      virtualisation.docker = {
-        enable = true;
-        enableOnBoot = false;
-      };
+    virtualisation.docker = {
+      enable = true;
+      enableOnBoot = false;
     };
 
     environment.systemPackages = with pkgs; [
