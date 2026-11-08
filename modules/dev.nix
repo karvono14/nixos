@@ -168,7 +168,7 @@
           enable = true;
           # defaultEditor = true;
           settings = {
-            theme = "dank";
+            theme = "tokyonight_tansparent";
             editor = {
               line-number = "relative";
               mouse = true;
