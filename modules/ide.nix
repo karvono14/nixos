@@ -49,105 +49,61 @@
 
           themes.terminal = {
             # --- Sintaxis (mismos roles que ves en bat) ---
-            "keyword" = "red";
-            "keyword.control" = {
-              fg = "red";
-              modifiers = [ "italic" ];
-            };
-            "keyword.operator" = "red";
-            "keyword.directive" = "red";
-            "operator" = "red";
-            "function" = "green";
-            "function.method" = "green";
-            "function.builtin" = "cyan";
-            "function.macro" = "cyan";
-            "type" = "cyan";
-            "type.builtin" = "cyan";
-            "constructor" = "cyan";
-            "namespace" = "cyan";
-            "constant" = "magenta";
-            "constant.builtin" = "magenta";
-            "constant.numeric" = "magenta";
+            "keyword"                   = "red";
+            "keyword.control"           = { fg                                  = "red"; modifiers          = [ "italic" ]; };
+            "keyword.operator"          = "red";
+            "keyword.directive"         = "red";
+            "operator"                  = "red";
+            "function"                  = "green";
+            "function.method"           = "green";
+            "function.builtin"          = "cyan";
+            "function.macro"            = "cyan";
+            "type"                      = "cyan";
+            "type.builtin"              = "cyan";
+            "constructor"               = "cyan";
+            "namespace"                 = "cyan";
+            "constant"                  = "magenta";
+            "constant.builtin"          = "magenta";
+            "constant.numeric"          = "magenta";
             "constant.character.escape" = "magenta";
-            "string" = "yellow";
-            "string.regexp" = "light-yellow";
-            "variable" = "default";
-            "variable.parameter" = {
-              fg = "light-yellow";
-              modifiers = [ "italic" ];
-            };
-            "variable.builtin" = "magenta";
-            "variable.other.member" = "green";
-            "attribute" = "green";
-            "tag" = "red";
-            "label" = "green";
-            "special" = "cyan";
-            "punctuation" = "default";
-            "comment" = {
-              fg = "gray";
-              modifiers = [ "italic" ];
-            };
+            "string"                    = "yellow";
+            "string.regexp"             = "light-yellow";
+            "variable"                  = "default";
+            "variable.parameter"        = { fg                                  = "light-yellow"; modifiers = [ "italic" ]; };
+            "variable.builtin"          = "magenta";
+            "variable.other.member"     = "green";
+            "attribute"                 = "green";
+            "tag"                       = "red";
+            "label"                     = "green";
+            "special"                   = "cyan";
+            "punctuation"               = "default";
+            "comment"                   = { fg                                  = "gray"; modifiers         = [ "italic" ]; };
 
             # --- Markdown y diff ---
-            "markup.heading" = {
-              fg = "blue";
-              modifiers = [ "bold" ];
-            };
-            "markup.bold" = {
-              modifiers = [ "bold" ];
-            };
-            "markup.italic" = {
-              modifiers = [ "italic" ];
-            };
-            "markup.link.url" = {
-              fg = "cyan";
-              modifiers = [ "underlined" ];
-            };
-            "markup.link.text" = "blue";
-            "markup.raw" = "green";
-            "markup.quote" = "gray";
-            "markup.list" = "red";
-            "diff.plus" = "green";
-            "diff.minus" = "red";
-            "diff.delta" = "yellow";
+            "markup.heading"            = { fg                                  = "blue"; modifiers         = [ "bold" ]; };
+            "markup.bold"               = { modifiers                           = [ "bold" ]; };
+            "markup.italic"             = { modifiers                           = [ "italic" ]; };
+            "markup.link.url"           = { fg                                  = "cyan"; modifiers             = [ "underlined" ]; };
+            "markup.link.text"          = "blue";
+            "markup.raw"                = "green";
+            "markup.quote"              = "gray";
+            "markup.list"               = "red";
+            "diff.plus"                 = "green";
+            "diff.minus"                = "red";
+            "diff.delta"                = "yellow";
 
             # --- Interfaz ---
-            "ui.background" = { };
-            "ui.text" = "default";
-            "ui.linenr" = "gray";
-            "ui.linenr.selected" = {
-              fg = "yellow";
-              modifiers = [ "bold" ];
-            };
-            "ui.cursorline.primary" = {
-              bg = "black";
-            };
-            "ui.selection" = {
-              bg = "gray";
-            };
-            "ui.cursor" = {
-              modifiers = [ "reversed" ];
-            };
-            "ui.cursor.match" = {
-              fg = "yellow";
-              modifiers = [
-                "bold"
-                "underlined"
-              ];
-            };
-            "ui.statusline" = {
-              fg = "default";
-              bg = "black";
-            };
-            "ui.statusline.inactive" = {
-              fg = "gray";
-              bg = "black";
-            };
-            "ui.statusline.normal" = {
-              fg = "black";
-              bg = "blue";
-              modifiers = [ "bold" ];
-            };
+            "ui.background"             = { };
+            "ui.text"                   = "default";
+            "ui.linenr"                 = "gray";
+            "ui.linenr.selected"        = { fg                                         = "yellow"; modifiers                                             = [ "bold" ]; };
+            "ui.cursorline.primary"     = { bg                                      = "black";};
+            "ui.selection"              = { bg                                               = "gray";};
+            "ui.cursor"                 = { modifiers                                           = [ "reversed" ]; };
+            "ui.cursor.match"           = { fg                                            = "yellow"; modifiers                                              = [ "bold" "underlined"]; };
+            "ui.statusline"             = { fg                                              = "default"; bg                  = "black"; };
+            "ui.statusline.inactive"    = { fg                                     = "gray"; bg               = "black";};
+            "ui.statusline.normal"      = { fg                                       = "black"; bg       = "blue"; modifiers = [ "bold" ]; };
             "ui.statusline.insert" = {
               fg = "black";
               bg = "green";
@@ -225,30 +181,30 @@
               fg = "primary";
               modifiers = [ "italic" ];
             };
-            "keyword.operator" = "secondary";
-            "operator" = "secondary";
-            "function" = "inf";
-            "function.builtin" = "tertiary";
-            "function.macro" = "tertiary";
-            "type" = "tertiary";
-            "type.builtin" = "tertiary";
-            "constructor" = "tertiary";
-            "namespace" = "secondary";
-            "constant" = "warn";
-            "constant.numeric" = "warn";
-            "constant.builtin" = "warn";
+            "keyword.operator"          = "secondary";
+            "operator"                  = "secondary";
+            "function"                  = "inf";
+            "function.builtin"          = "tertiary";
+            "function.macro"            = "tertiary";
+            "type"                      = "tertiary";
+            "type.builtin"              = "tertiary";
+            "constructor"               = "tertiary";
+            "namespace"                 = "secondary";
+            "constant"                  = "warn";
+            "constant.numeric"          = "warn";
+            "constant.builtin"          = "warn";
             "constant.character.escape" = "primary";
-            "string" = "ok";
-            "string.regexp" = "secondary";
-            "variable" = "fg";
-            "variable.builtin" = "err";
-            "variable.parameter" = "secondary";
-            "variable.other.member" = "fg";
-            "attribute" = "tertiary";
-            "tag" = "err";
-            "label" = "inf";
-            "special" = "inf";
-            "punctuation" = "fg_dim";
+            "string"                    = "ok";
+            "string.regexp"             = "secondary";
+            "variable"                  = "fg";
+            "variable.builtin"          = "err";
+            "variable.parameter"        = "secondary";
+            "variable.other.member"     = "fg";
+            "attribute"                 = "tertiary";
+            "tag"                       = "err";
+            "label"                     = "inf";
+            "special"                   = "inf";
+            "punctuation"               = "fg_dim";
             "comment" = {
               fg = "outline";
               modifiers = [ "italic" ];
@@ -395,22 +351,22 @@
             };
 
             palette = {
-              bg = "#1d1012"; # surface
-              bg_float = "#2a1c1e"; # surfaceContainer
-              cursorline = "#26181a"; # surfaceContainerLow
-              sel = "#5a396d"; # secondaryContainer
-              fg = "#f7dcdf"; # surfaceText
-              fg_dim = "#e4bdc2"; # surfaceVariantText
-              outline = "#ab888d"; # outline
+              bg          = "#1d1012"; # surface
+              bg_float    = "#2a1c1e"; # surfaceContainer
+              cursorline  = "#26181a"; # surfaceContainerLow
+              sel         = "#5a396d"; # secondaryContainer
+              fg          = "#f7dcdf"; # surfaceText
+              fg_dim      = "#e4bdc2"; # surfaceVariantText
+              outline     = "#ab888d"; # outline
               outline_dim = "#5c3f44"; # surfaceVariant
-              primary = "#e6b4ff";
-              on_primary = "#491765"; # primaryText
-              secondary = "#e1b7f5";
-              tertiary = "#ffb2bf";
-              err = "#ffb4ab"; # error
-              warn = "#FF9800"; # warning
-              inf = "#2196F3"; # info
-              ok = "#4CAF50"; # success
+              primary     = "#e6b4ff";
+              on_primary  = "#491765"; # primaryText
+              secondary   = "#e1b7f5";
+              tertiary    = "#ffb2bf";
+              err         = "#ffb4ab"; # error
+              warn        = "#FF9800"; # warning
+              inf         = "#2196F3"; # info
+              ok          = "#4CAF50"; # success
             };
           };
 
