@@ -9,6 +9,7 @@
         base
         desktop
         dev
+        ide
         display-manager
         gaming
         locale
