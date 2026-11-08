@@ -35,28 +35,6 @@
     home-manager.users.karvono14 = { config, ... }: {
 
       xdg.configFile."matugen/templates/helix.toml".text = ''
-        [palette]
-        bg          = "{{colors.surface.default.hex}}"
-        bg_float    = "{{colors.surface_container.default.hex}}"
-        cursorline  = "{{colors.surface_container_low.default.hex}}"
-        selection   = "{{colors.secondary_container.default.hex}}"
-        fg          = "{{colors.on_surface.default.hex}}"
-        fg_dim      = "{{colors.on_surface_variant.default.hex}}"
-        outline     = "{{colors.outline.default.hex}}"
-        outline_dim = "{{colors.outline_variant.default.hex}}"
-        primary     = "{{colors.primary.default.hex}}"
-        on_primary  = "{{colors.on_primary.default.hex}}"
-
-        red            = "{{dank16.color1.default.hex}}"
-        green          = "{{dank16.color2.default.hex}}"
-        yellow         = "{{dank16.color3.default.hex}}"
-        blue           = "{{dank16.color4.default.hex}}"
-        magenta        = "{{dank16.color5.default.hex}}"
-        cyan           = "{{dank16.color6.default.hex}}"
-        grey           = "{{dank16.color8.default.hex}}"
-        bright_green   = "{{dank16.color10.default.hex}}"
-        bright_yellow  = "{{dank16.color11.default.hex}}"
-        bright_cyan    = "{{dank16.color14.default.hex}}"
 
         # --- Sintaxis ---
         "keyword"                  = "magenta"
@@ -150,6 +128,30 @@
         "diagnostic.info"          = { underline = { color = "cyan", style = "curl" } }
         "diagnostic.hint"          = { underline = { color = "green", style = "curl" } }
         "diagnostic.unnecessary"   = { modifiers = ["dim"] }
+
+        [palette]
+        bg          = "{{colors.surface.default.hex}}"
+        bg_float    = "{{colors.surface_container.default.hex}}"
+        cursorline  = "{{colors.surface_container_low.default.hex}}"
+        selection   = "{{colors.secondary_container.default.hex}}"
+        fg          = "{{colors.on_surface.default.hex}}"
+        fg_dim      = "{{colors.on_surface_variant.default.hex}}"
+        outline     = "{{colors.outline.default.hex}}"
+        outline_dim = "{{colors.outline_variant.default.hex}}"
+        primary     = "{{colors.primary.default.hex}}"
+        on_primary  = "{{colors.on_primary.default.hex}}"
+
+        red            = "{{dank16.color1.default.hex}}"
+        green          = "{{dank16.color2.default.hex}}"
+        yellow         = "{{dank16.color3.default.hex}}"
+        blue           = "{{dank16.color4.default.hex}}"
+        magenta        = "{{dank16.color5.default.hex}}"
+        cyan           = "{{dank16.color6.default.hex}}"
+        grey           = "{{dank16.color8.default.hex}}"
+        bright_green   = "{{dank16.color10.default.hex}}"
+        bright_yellow  = "{{dank16.color11.default.hex}}"
+        bright_cyan    = "{{dank16.color14.default.hex}}"
+
       '';
 
       xdg.configFile."matugen/config.toml".text = ''
