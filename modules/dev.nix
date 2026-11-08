@@ -168,7 +168,7 @@
           enable = true;
           # defaultEditor = true;
           settings = {
-            theme = "tokyonight_tansparent";
+            theme = "tokyonight_transparent";
             editor = {
               line-number = "relative";
               mouse = true;
