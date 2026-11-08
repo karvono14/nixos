@@ -1,6 +1,6 @@
 { inputs, ... }:
 {
-  flake.modules.nixos.dev = { pkgs, config, ... }: {
+  flake.modules.nixos.ide = { pkgs, config, ... }: {
 
     programs.neovim = {
       enable = true;
