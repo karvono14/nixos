@@ -58,86 +58,85 @@
         output_path = '${config.xdg.configHome}/helix/themes/dank.toml'
       '';
 
-    };
+      programs = {
 
-    home-manager.users.karvono14.programs = {
-
-      helix = {
-        enable = true;
-        # defaultEditor = true;
-        settings = {
-          theme = "dank";
-          editor = {
-            line-number = "relative";
-            mouse = true;
-            cursor-shape = {
-              insert = "bar";
-              normal = "block";
-              select = "underline";
+        helix = {
+          enable = true;
+          # defaultEditor = true;
+          settings = {
+            theme = "dank";
+            editor = {
+              line-number = "relative";
+              mouse = true;
+              cursor-shape = {
+                insert = "bar";
+                normal = "block";
+                select = "underline";
+              };
+              file-picker = {
+                hidden = false;
+              };
             };
-            file-picker = {
-              hidden = false;
+            keys.normal = {
+              space.space = "file_picker";
+              esc = [
+                "collapse_selection"
+                "keep_primary_selection"
+              ];
             };
           };
-          keys.normal = {
-            space.space = "file_picker";
-            esc = [
-              "collapse_selection"
-              "keep_primary_selection"
+
+          # Configuración de lenguajes (languages.toml)
+          languages = {
+            language = [
+              # nix
+              {
+                name = "nix";
+                auto-format = true;
+                formatter = {
+                  command = "${pkgs.nixfmt}/bin/nixfmt";
+                };
+              }
+              # python
+              {
+                name = "python";
+                auto-format = true;
+                language-servers = [ "pyright" ];
+                formatter = {
+                  command = "${pkgs.ruff}/bin/ruff";
+                  args = [
+                    "format"
+                    "-"
+                  ];
+                };
+              }
+              # C
+              {
+                name = "c";
+                auto-format = true;
+                language-servers = [ "clangd" ];
+              }
             ];
           };
-        };
 
-        # Configuración de lenguajes (languages.toml)
-        languages = {
-          language = [
-            # nix
-            {
-              name = "nix";
-              auto-format = true;
-              formatter = {
-                command = "${pkgs.nixfmt}/bin/nixfmt";
-              };
-            }
-            # python
-            {
-              name = "python";
-              auto-format = true;
-              language-servers = [ "pyright" ];
-              formatter = {
-                command = "${pkgs.ruff}/bin/ruff";
-                args = [
-                  "format"
-                  "-"
-                ];
-              };
-            }
-            # C
-            {
-              name = "c";
-              auto-format = true;
-              language-servers = [ "clangd" ];
-            }
+          # Paquetes adicionales necesarios para tus lenguajes (LSP, formatters)
+          extraPackages = with pkgs; [
+            nil # LSP para Nix
+            marksman # LSP para Markdown
+            typescript-language-server
+            pyright
+            ruff
+            clang-tools
+            cmake
           ];
+
         };
-
-        # Paquetes adicionales necesarios para tus lenguajes (LSP, formatters)
-        extraPackages = with pkgs; [
-          nil # LSP para Nix
-          marksman # LSP para Markdown
-          typescript-language-server
-          pyright
-          ruff
-          clang-tools
-          cmake
-        ];
-
       };
-    };
 
-    virtualisation.docker = {
-      enable = true;
-      enableOnBoot = false;
+      virtualisation.docker = {
+        enable = true;
+        enableOnBoot = false;
+      };
     };
 
     environment.systemPackages = with pkgs; [
