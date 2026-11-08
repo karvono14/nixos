@@ -168,7 +168,7 @@
           enable = true;
           # defaultEditor = true;
           settings = {
-            theme = "extracted";
+            theme = "dank";
             editor = {
               line-number = "relative";
               mouse = true;
