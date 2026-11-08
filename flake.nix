@@ -7,8 +7,8 @@
     serein.url = "github:ViceVerse-cz/Serein";
     home-manager.url = "github:nix-community/home-manager/release-26.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    yazelix.url = "github:Yazelix/nova/stable";
-    tfm.url = "github:karvono14/tfm-tui";
+    # yazelix.url = "github:Yazelix/nova/stable";
+    # tfm.url = "github:karvono14/tfm-tui";
     concat.url = "github:jub0t/Concat";
   };
 

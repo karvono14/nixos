@@ -27,8 +27,9 @@
       mpv
       eza
       ranger
+      image-roll
 
-      inputs.tfm.packages.${pkgs.stdenv.hostPlatform.system}.default
+      # inputs.tfm.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.serein.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.concat.packages.${pkgs.stdenv.hostPlatform.system}.default
 
