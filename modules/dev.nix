@@ -32,12 +32,41 @@
       ];
     };
 
+    home-manager.users.karvono14 = { config, ... }: {
+
+      # 1. La plantilla (lo que me pasaste)
+      xdg.configFile."matugen/templates/helix.toml".text = ''
+        "keyword"   = "{{dank16.color5.default.hex}}"
+        "string"    = "{{dank16.color2.default.hex}}"
+        "function"  = "{{dank16.color4.default.hex}}"
+        "type"      = "{{dank16.color3.default.hex}}"
+        "constant"  = "{{dank16.color1.default.hex}}"
+        "comment"   = { fg = "{{dank16.color8.default.hex}}", modifiers = ["italic"] }
+
+        "ui.background"   = {}
+        "ui.text"         = "{{colors.on_surface.default.hex}}"
+        "ui.selection"    = { bg = "{{colors.secondary_container.default.hex}}" }
+        "ui.statusline"   = { fg = "{{colors.on_surface.default.hex}}", bg = "{{colors.surface_container.default.hex}}" }
+      '';
+
+      # 2. El registro de la plantilla en matugen
+      xdg.configFile."matugen/config.toml".text = ''
+        [config]
+
+        [templates.helix]
+        input_path = '${config.xdg.configHome}/matugen/templates/helix.toml'
+        output_path = '${config.xdg.configHome}/helix/themes/dank.toml'
+      '';
+
+    };
+
     home-manager.users.karvono14.programs = {
+
       helix = {
         enable = true;
         # defaultEditor = true;
         settings = {
-          theme = "base16_terminal";
+          theme = "dank";
           editor = {
             line-number = "relative";
             mouse = true;
