@@ -420,7 +420,7 @@
               # nix
               {
                 name = "nix";
-                auto-format = true;
+                auto-format = false;
                 formatter = {
                   command = "${pkgs.nixfmt}/bin/nixfmt";
                 };
@@ -428,7 +428,7 @@
               # python
               {
                 name = "python";
-                auto-format = true;
+                auto-format = false;
                 language-servers = [ "pyright" ];
                 formatter = {
                   command = "${pkgs.ruff}/bin/ruff";
@@ -441,7 +441,7 @@
               # C
               {
                 name = "c";
-                auto-format = true;
+                auto-format = false;
                 language-servers = [ "clangd" ];
               }
             ];
