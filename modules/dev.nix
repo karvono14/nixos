@@ -371,7 +371,7 @@
             };
           };
 
-          themes.exracted = {
+          themes.extracted = {
             # --- Sintaxis ---
             "keyword" = "primary";
             "keyword.control" = {
