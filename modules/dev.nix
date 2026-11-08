@@ -37,7 +37,7 @@
       # 1. La plantilla (lo que me pasaste)
       xdg.configFile."matugen/templates/helix.toml".text = ''
 
-                # --- Sintaxis ---
+        # --- Sintaxis ---
         "keyword"                  = "magenta"
         "keyword.control"          = { fg = "magenta", modifiers = ["italic"] }
         "keyword.operator"         = "bright_cyan"
@@ -130,7 +130,6 @@
         "diagnostic.hint"          = { underline = { color = "green", style = "curl" } }
         "diagnostic.unnecessary"   = { modifiers = ["dim"] }
 
-
         [palette]
         bg          = "{{colors.surface.default.hex}}"
         bg_float    = "{{colors.surface_container.default.hex}}"
@@ -153,8 +152,6 @@
         bright_green   = "{{dank16.color10.default.hex}}"
         bright_yellow  = "{{dank16.color11.default.hex}}"
         bright_cyan    = "{{dank16.color14.default.hex}}"
-
-
       '';
 
       # 2. El registro de la plantilla en matugen
