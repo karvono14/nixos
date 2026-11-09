@@ -10,6 +10,7 @@
     # yazelix.url = "github:Yazelix/nova/stable";
     # tfm.url = "github:karvono14/tfm-tui";
     concat.url = "github:jub0t/Concat";
+    zen.url = "github:0xc000022070/zen-browser-flake";
   };
 
   outputs =
