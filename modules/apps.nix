@@ -5,6 +5,7 @@
 
     programs.firefox.enable = true;
 
+    home-manager.backupFileExtension = "backup";
     home-manager.users.karvono14 = {
 
       imports = [inputs.zen.homeModules.default]; 
