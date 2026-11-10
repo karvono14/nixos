@@ -20,7 +20,7 @@
         profiles.default.presets.catppuccin = {
           enable = true;
           flavor = "Mocha"; # Frappe | Latte | Macchiato | Mocha
-          accent = "Lavander"; # Blue, Flamingo, Green, Lavender, Maroon, Mauve, ...
+          accent = "Flamingo"; # Blue, Flamingo, Green, Lavender, Maroon, Mauve, ...
         };
 
         # Betterfox for Zen (yokoffing/Betterfox zen/user.js, aka BetterZen):
