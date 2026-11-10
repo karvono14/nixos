@@ -2,11 +2,13 @@
 {
   flake.modules.nixos.apps = { pkgs, ... }: {
 
-    imports = [inputs.zen.homeModules.default]; 
 
     programs.firefox.enable = true;
 
     home-manager.users.karvono14.programs = {
+
+    imports = [inputs.zen.homeModules.default]; 
+
       yazi = {
         enable = true;
       };
