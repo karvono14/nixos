@@ -1,10 +1,17 @@
 { inputs, ... }:
 {
   flake.modules.nixos.apps = { pkgs, ... }: {
+
+    imports = [inputs.zen.homeModules.default]; 
+
     programs.firefox.enable = true;
 
     home-manager.users.karvono14.programs = {
       yazi = {
+        enable = true;
+      };
+
+      zen-browser = {
         enable = true;
       };
     };
@@ -32,7 +39,6 @@
       # inputs.tfm.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.serein.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.concat.packages.${pkgs.stdenv.hostPlatform.system}.default
-      inputs.zen.packages.${pkgs.stdenv.hostPlatform.system}.default
 
       # (rWrapper.override {
       #   packages = with rPackages; [
