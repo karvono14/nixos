@@ -5,15 +5,15 @@
 
     programs.firefox.enable = true;
 
-    home-manager.users.karvono14.programs = {
+    home-manager.users.karvono14 = {
 
-    imports = [inputs.zen.homeModules.default]; 
+      imports = [inputs.zen.homeModules.default]; 
 
-      yazi = {
+      programs.yazi = {
         enable = true;
       };
 
-      zen-browser = {
+      programs.zen-browser = {
         enable = true;
       };
     };
