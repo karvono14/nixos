@@ -15,8 +15,24 @@
 
       programs.zen-browser = {
         enable = true;
+        # Catppuccin theme (catppuccin/zen-browser), symlinked into the profile's
+        # chrome/catppuccin and loaded via userChrome/userContent imports.
+        profiles.default.presets.catppuccin = {
+          enable = true;
+          flavor = "Mocha"; # Frappe | Latte | Macchiato | Mocha
+          accent = "Lavander"; # Blue, Flamingo, Green, Lavender, Maroon, Mauve, ...
+        };
+
+        # Betterfox for Zen (yokoffing/Betterfox zen/user.js, aka BetterZen):
+        # privacy/telemetry/performance prefs applied as mkDefault settings —
+        # any profile `settings` entry wins.
+        profiles.default.presets.betterfox.enable = true;
+
+        # arkenfox for Zen (arkenfox/user.js)
+        profiles.default.presets.arkenfox.enable = true;
       };
     };
+
 
     environment.systemPackages = with pkgs; [
       pacman
