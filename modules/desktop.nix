@@ -2,21 +2,40 @@
 {
   flake.modules.nixos.desktop = { pkgs, ... }: {
 
-    imports = [ inputs.dms.nixosModules.default ];
+    imports = [
+      inputs.dms.nixosModules.default
+      inputs.dfiles.nixosModules.dux-files
+    ];
 
-    programs = {
-      niri = {
+    programs.niri.enable = true;
+    programs.dms = {
+      enable = true;
+      systemd = {
         enable = true;
-      };
-      dank-material-shell = {
-        enable = true;
-        systemd = {
-          enable = true;
-          restartIfChanged = true;
-        };
+        restartIfChanged = true;
       };
     };
+    programs.dux-files = {
+      enable = true;
 
+      # The Quickshell package that runs the UI
+      quickshell.package = pkgs.quickshell;
+
+      # Keep a resident instance so windows open fast and the portal answers at once
+      systemd = {
+        enable = true;
+        target = "graphical-session.target";
+        restartIfChanged = true;
+      };
+
+      # Serve other apps' open and save dialogs
+      portal = {
+        enable = true;      # register the dfiles backend with xdg-desktop-portal
+        preferred = true;   # prefer it for org.freedesktop.impl.portal.FileChooser
+        desktop = "niri";   # which xdg.portal.config entry gets the preference, "common" by default
+      };
+    };
+    
     xdg.portal = {
       enable = true;
       wlr.enable = true;
