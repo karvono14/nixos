@@ -140,6 +140,7 @@
         btop
       ];
       environment.shellAliases = {
+        sudo = "run0";
         eza = "eza --icons=auto --git";
         ls = "eza --icons=auto --git";
         ll = "eza -l --icons=auto --git";
