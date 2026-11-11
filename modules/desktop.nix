@@ -8,7 +8,7 @@
     ];
 
     programs.niri.enable = true;
-    programs.dms = {
+    programs.dms-shell = {
       enable = true;
       systemd = {
         enable = true;
