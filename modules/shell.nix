@@ -61,6 +61,7 @@
           # interactiveShellInit = "fastfetch";
 
           shellAliases = {
+            run0 = "run0 --setenv=TERMINFO";
             cf = "cd ~/nixos";
             rebuild-switch = "sudo nixos-rebuild switch --flake ~/nixos#nixos";
             rebuild-boot = "sudo nixos-rebuild boot --flake ~/nixos#nixos";
