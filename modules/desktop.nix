@@ -18,8 +18,6 @@
     programs.dux-files = {
       enable = true;
 
-      # The Quickshell package that runs the UI
-      quickshell.package = pkgs.quickshell;
 
       # Keep a resident instance so windows open fast and the portal answers at once
       systemd = {
