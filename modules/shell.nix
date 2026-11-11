@@ -59,14 +59,6 @@
           autosuggestions.enable = true;
           syntaxHighlighting.enable = true;
           # interactiveShellInit = "fastfetch";
-
-          shellAliases = {
-            run0 = "run0 --setenv=TERMINFO";
-            cf = "cd ~/nixos";
-            rebuild-switch = "sudo nixos-rebuild switch --flake ~/nixos#nixos";
-            rebuild-boot = "sudo nixos-rebuild boot --flake ~/nixos#nixos";
-          };
-
           ohMyZsh = {
             enable = true;
             plugins = [
@@ -108,6 +100,7 @@
             # Window Configuration
             # window_padding_width 12
             # background_opacity 1.0
+            transparent_background_colors #500000@0.5
             background_blur 32
             hide_window_decorations yes
 
@@ -141,7 +134,16 @@
         btop
       ];
       environment.shellAliases = {
+        # sudouser
+        run0 = "run0 --setenv=TERMINFO --background='48;2;80;0;0'"; 
         sudo = "run0";
+
+        # config de nixos
+        cf = "cd ~/nixos";
+        rebuild-switch = "sudo nixos-rebuild switch --flake ~/nixos#nixos";
+        rebuild-boot = "sudo nixos-rebuild boot --flake ~/nixos#nixos";
+
+        # eza aliases
         eza = "eza --icons=auto --git";
         ls = "eza --icons=auto --git";
         ll = "eza -l --icons=auto --git";
