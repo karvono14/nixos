@@ -20,6 +20,6 @@
     let
       modulos = inputs.import-tree ./modules;
     in
-    inputs.flake-parts.lib.mkFlake { inherit inputs; } modulos;
+      inputs.flake-parts.lib.mkFlake { inherit inputs; } modulos;
 
 }
