@@ -5,6 +5,7 @@
     import-tree.url = "github:denful/import-tree";
     dms.url = "github:duxlabs-dev/dux-shell/stable";
     dfiles.url = "github:duxlabs-dev/dux-files";
+    dsearch.url = "github:duxlabs-dev/dux-search";
     serein.url = "github:ViceVerse-cz/Serein";
     home-manager.url = "github:nix-community/home-manager/release-26.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
