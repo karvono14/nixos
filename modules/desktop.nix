@@ -5,8 +5,7 @@
     imports = [
       inputs.dms.nixosModules.default
       inputs.dfiles.nixosModules.dux-files
-      inputs.dsearch.nixosModules.default
-    ];
+      ];
 
     programs.niri.enable = true;
     programs.dms-shell = {
@@ -34,6 +33,7 @@
     programs.dsearch = {
       enable = true;
       systemd.enable = true;
+      package = inputs.dsearch.packages.${pkgs.stdenv.hostPlatform.system}.default;
     };
     
     xdg.portal = {
