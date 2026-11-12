@@ -34,7 +34,6 @@
     environment.systemPackages = with pkgs; [
       devenv
       glow
-      vscode
       jq
       gh
       github-desktop
