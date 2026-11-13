@@ -1,18 +1,37 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
-    flake-parts.url = "github:hercules-ci/flake-parts";
-    import-tree.url = "github:denful/import-tree";
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    import-tree = {
+      url = "github:denful/import-tree";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    dfiles = {
+      url = "github:duxlabs-dev/dux-files";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    dsearch = {
+      url = "github:duxlabs-dev/dux-search";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    serein = {
+      url = "github:ViceVerse-cz/Serein";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    home-manager = {
+      url = "github:nix-community/home-manager/release-26.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    concat ={
+      url = "github:jub0t/Concat";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     dms.url = "github:duxlabs-dev/dux-shell/stable";
-    dfiles.url = "github:duxlabs-dev/dux-files";
-    dsearch.url = "github:duxlabs-dev/dux-search";
-    serein.url = "github:ViceVerse-cz/Serein";
-    home-manager.url = "github:nix-community/home-manager/release-26.05";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
     # yazelix.url = "github:Yazelix/nova/stable";
     # tfm.url = "github:karvono14/tfm-tui";
-    concat.url = "github:jub0t/Concat";
-    zen.url = "github:0xc000022070/zen-browser-flake";
   };
 
   outputs =
