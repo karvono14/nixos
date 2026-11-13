@@ -13,25 +13,6 @@
       programs.yazi = {
         enable = true;
       };
-
-      programs.zen-browser = {
-        enable = true;
-        # Catppuccin theme (catppuccin/zen-browser), symlinked into the profile's
-        # chrome/catppuccin and loaded via userChrome/userContent imports.
-        profiles.default.presets.catppuccin = {
-          enable = true;
-          flavor = "Mocha"; # Frappe | Latte | Macchiato | Mocha
-          accent = "Flamingo"; # Blue, Flamingo, Green, Lavender, Maroon, Mauve, ...
-        };
-
-        # Betterfox for Zen (yokoffing/Betterfox zen/user.js, aka BetterZen):
-        # privacy/telemetry/performance prefs applied as mkDefault settings —
-        # any profile `settings` entry wins.
-        profiles.default.presets.betterfox.enable = true;
-
-        # arkenfox for Zen (arkenfox/user.js)
-        profiles.default.presets.arkenfox.enable = true;
-      };
     };
 
 
@@ -40,7 +21,7 @@
       nox
       aseprite
       keepassxc
-      nautilus
+      # nautilus
       adw-gtk3
       ncdu
       krita
@@ -68,7 +49,7 @@
     ];
 
     virtualisation.virtualbox.host = {
-      enable = true;
+      enable = false;
       enableExtensionPack = true;
     };
 
