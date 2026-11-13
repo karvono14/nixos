@@ -4,6 +4,7 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:denful/import-tree";
     dms.url = "github:duxlabs-dev/dux-shell/stable";
+    serein.url = "github:ViceVerse-cz/Serein";
     
     dfiles = {
       url = "github:duxlabs-dev/dux-files";
@@ -11,10 +12,6 @@
     };
     dsearch = {
       url = "github:duxlabs-dev/dux-search";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    serein = {
-      url = "github:ViceVerse-cz/Serein";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
