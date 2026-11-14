@@ -16,10 +16,17 @@
     services.flatpak.enable = true;
     services.printing.enable = true;
     environment.systemPackages = with pkgs; [ wget curl ];
+
     zramSwap = {
       enable = true;
       memoryPercent = 50;
+      priority = 10;
     };
+
+    swapDevices = [
+      { device = "/swapfile"; priority = 5; }
+      { device = "/dev/sda3"; priority = 0; }
+    ];
   };
    
 }
