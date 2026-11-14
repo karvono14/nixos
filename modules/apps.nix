@@ -34,8 +34,8 @@
       image-roll
 
       # inputs.tfm.packages.${pkgs.stdenv.hostPlatform.system}.default
-      # inputs.serein.packages.${pkgs.stdenv.hostPlatform.system}.default
-      # inputs.concat.packages.${pkgs.stdenv.hostPlatform.system}.default
+      inputs.serein.packages.${pkgs.stdenv.hostPlatform.system}.default
+      inputs.concat.packages.${pkgs.stdenv.hostPlatform.system}.default
 
       # (rWrapper.override {
       #   packages = with rPackages; [
