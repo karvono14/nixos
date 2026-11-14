@@ -11,7 +11,7 @@
     environment.systemPackages = with pkgs; [
       osu-lazer-bin
       cacert
-      modrinth-app
+      # modrinth-app
     ];
 
     security.pki.certificateFiles = [ ]; # Asegura el almacén de certificados por defecto

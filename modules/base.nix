@@ -16,6 +16,10 @@
     services.flatpak.enable = true;
     services.printing.enable = true;
     environment.systemPackages = with pkgs; [ wget curl ];
+    zramSwap = {
+      enable = true;
+      memoryPercent = 50;
+    };
   };
    
 }
