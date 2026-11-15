@@ -22,6 +22,11 @@
         enable = true;
         target = "graphical-session.target";
         restartIfChanged = true;
+        user.services.dfiles.path = [
+          "/run/wrappers"
+          "/etc/profiles/per-user/karvono14"
+          "/run/current-system/sw"
+        ];
       };
       # Serve other apps' open and save dialogs
       portal = {
