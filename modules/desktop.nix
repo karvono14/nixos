@@ -22,11 +22,6 @@
         enable = true;
         target = "graphical-session.target";
         restartIfChanged = true;
-        user.services.dfiles.path = [
-          "/run/wrappers"
-          "/etc/profiles/per-user/karvono14"
-          "/run/current-system/sw"
-        ];
       };
       # Serve other apps' open and save dialogs
       portal = {
@@ -35,11 +30,20 @@
         desktop = "niri";   # which xdg.portal.config entry gets the preference, "common" by default
       };
     };
+
+    # dux indexer
     programs.dsearch = {
       enable = true;
       systemd.enable = true;
       package = inputs.dsearch.packages.${pkgs.stdenv.hostPlatform.system}.default;
     };
+
+    # paths for dfiles
+    systemd.user.services.dfiles.path = [
+      "/run/wrappers"
+      "/etc/profiles/per-user/karvono14"
+      "/run/current-system/sw"
+    ];
     
     xdg.portal = {
       enable = true;
