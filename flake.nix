@@ -5,6 +5,7 @@
     import-tree.url = "github:denful/import-tree";
     dms.url = "github:duxlabs-dev/dux-shell/stable";
     serein.url = "github:ViceVerse-cz/Serein";
+    concat.url = "github:jub0t/Concat";
     
     dfiles = {
       url = "github:duxlabs-dev/dux-files";
@@ -16,10 +17,6 @@
     };
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    concat ={
-      url = "github:jub0t/Concat";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # yazelix.url = "github:Yazelix/nova/stable";
