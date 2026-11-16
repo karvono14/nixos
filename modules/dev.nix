@@ -23,6 +23,8 @@
         libXi
         libXrandr
         alsa-lib
+        libGL
+        vulkan-loader
       ];
     };
 
