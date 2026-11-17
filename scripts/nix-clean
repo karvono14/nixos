@@ -4,7 +4,7 @@ if [ -z "$1" ]; then
   exit 1
 fi
   echo "[+] Eliminando generaciones antiguas y dejando solo las últimas $1..."
-  sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations "$1"
+  run0 nix-env --profile /nix/var/nix/profiles/system --delete-generations "$1"
 
   echo "[+] Ejecutando recolector de basura general..."
-  sudo nix-collect-garbage -d
+  run0 nix-collect-garbage -d

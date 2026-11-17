@@ -6,5 +6,5 @@ fi
   echo "[+] Reconstruyendo... "
   git add .
   git commit -m "$1"
-  sudo nixos-rebuild switch --flake ~/nixos#nixos
+  run0 nixos-rebuild switch --flake ~/nixos#nixos
   
