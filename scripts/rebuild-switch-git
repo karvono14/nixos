@@ -1,6 +1,6 @@
 if [ -z "$1"]; then
   echo "[x] Error: Debes proporcionar un nombre para el commmit."
-  echo "[i] Uso: rebuild-switch-git "nombre del commit""
+  echo "[i] Uso: rebuild-switch-git <nombre del commit>"
   exit 1
 fi
   echo "[+] Reconstruyendo... "
