@@ -1,0 +1,10 @@
+if [ -z "$1" ]; then
+  echo "[x] Error: Debes indicar cuantas generaciones deceas conservar"
+  echo "[i] Uso: nix-clean +n (n = numero de generaciones a conservar)"
+  exit 1
+fi
+  echo "[+] Eliminando generaciones antiguas y dejando solo las últimas $1..."
+  sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations "$1"
+
+  echo "[+] Ejecutando recolector de basura general..."
+  sudo nix-collect-garbage -d

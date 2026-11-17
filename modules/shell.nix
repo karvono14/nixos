@@ -111,8 +111,8 @@
       environment.systemPackages = with pkgs; [
         fastfetch
         btop
-        (writeShellScriptBin "rebuild-switch-git" (builtins.readFile ../scripts/rebuild-switch-git))
-        (writeShellScriptBin "nix-clean" (builtins.readFile ../scripts/nix-clean))
+        (writeShellScriptBin "rebuild-switch-git" (builtins.readFile ./scripts/rebuild-switch-git))
+        (writeShellScriptBin "nix-clean" (builtins.readFile ./scripts/nix-clean))
       ];
     };
 }
